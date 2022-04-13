@@ -1,13 +1,17 @@
 const myBox = document.getElementById("my-box");
+let newColor = "blue";
 
 function setColor(color) {
     myBox.style.backgroundColor = color;
 }
 
 function onClick() {
-    setColor ("blue");
+    if (newColor == "red" ) {
+        newColor = "blue";
+    } else {
+        newColor = "red";
+    }   
+    setColor(newColor)
 }
-
-myBox.addEventListener("click", onClick);
 
 
