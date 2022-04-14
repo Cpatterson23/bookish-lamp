@@ -1,1 +1,1 @@
-changing color on click
+random color on click
