@@ -1,17 +1,34 @@
 const myBox = document.getElementById("my-box");
-let newColor = "blue";
+ let randomColor = "red";
 
-function setColor(color) {
-    myBox.style.backgroundColor = color;
+function changeColor() {
+
+if (randomColor == "red") {
+    randomColor = "salmon";
+}  else if (randomColor == "salmon") {
+   randomColor = "black";
+} else if ( randomColor == "black") {
+  randomColor = "orange"; 
+} else if (randomColor == "orange") {
+  randomColor = "teal";
+} else {
+ randomColor = "red";
 }
+ myBox.style.backgroundColor = randomColor
+}
+
+
+
+function resize() {
+   
+   
+} 
 
 function onClick() {
-    if (newColor == "red" ) {
-        newColor = "blue";
-    } else {
-        newColor = "red";
-    }   
-    setColor(newColor)
+    changeColor();
+    resize();
 }
+
+myBox.addEventListener("click", onClick);
 
 
